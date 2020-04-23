@@ -21,11 +21,11 @@ end
 
 def full?(board)
   board.all? do |index|
-    index == "X" || index == "O"}
+    index == "X" || index == "O"
 end
 
 def draw?(board)
-  if !won?(board) && full?(board)
+  if !won?(board) && full?(board)# Means if the board has not been won, but the board is full. this is a draw
     return true
   else
     return false
