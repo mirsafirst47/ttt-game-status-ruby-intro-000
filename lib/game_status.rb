@@ -35,20 +35,20 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? do |index|
+  board.all? do |index|# if all indexes of the board are full by either X or O
     index == "X" || index == "O"
   end
 end
 
 def draw?(board)
-  if !won?(board) && full?(board)
+  if !won?(board) && full?(board) # no winning combinations but board is full.
     return true
   else
     return false
   end
 end
 
-def over?(board)
+def over?(board)#the game is over when either there is a win or the board is full or the game is a draw
   if won?(board) || full?(board) || draw?(board)
     return true
   else
