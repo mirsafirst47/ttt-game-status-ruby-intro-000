@@ -20,10 +20,15 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? {|index| index == "X" || index == "O"}
+  board.all? do |index|
+    index == "X" || index == "O"}
 end
 
 def draw?(board)
+  if !won?(board) && full?(board)
+    return true
+  else
+    return false
 end
 
 def over?(board)
