@@ -31,25 +31,3 @@ def draw?(board)
     return false
   end
 end
-
-def over?(board)
-  if won?(board) || full?(board) || draw(board)# the game is over if won?, or full?, or draw? .
-    return true
-  else
-    return false
-  end
-end
-
-def winner(board)
-  index = []
-  index = won?(board)
-  if index == false
-    return nil
-  else
-    if board[index[0]] == "X"
-      return "X"
-    else
-      return "O"
-    end
-  end
-end
