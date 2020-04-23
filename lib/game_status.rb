@@ -33,7 +33,7 @@ def draw?(board)
 end
 
 def over?(board)
-  if won?(board) || full?(board) || draw(board)
+  if won?(board) || full?(board) || draw(board)# the game is over if won?, or full?, or draw? .
     return true
   else
     return false
